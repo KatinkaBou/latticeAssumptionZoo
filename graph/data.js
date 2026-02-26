@@ -118,7 +118,7 @@ assumption('NFSIS', 'Normal Form SIS', 2001, ['Commitment', 'ZK', 'Sign'], '/sis
 assumption('ISIS', 'Inhomogeneous SIS', 1997, ['Commitment', 'ZK', 'Sign'], '/sis/#inhomogeneous-sis_nmqbeta', 'SIS', true); // Ajtai–Dwork - A Public-Key Cryptosystem with Worst-Case/Average-Case Equivalence
 assumption('ApproxSIS', 'Approximate SIS', 2019, ['Sign'], '/approxsis/', 'SIS');
 
-assumption('k-SIS', 'k-SIS', 2011, ['Sign', 'COAD'], '/TODO/', 'SIS');
+assumption('k-SIS', 'k-SIS', 2011, ['Sign', 'COAD'], '/ksis/', 'SIS');
 
 assumption('ISISf', 'ISISf', 2023, ['Sign', 'PrivEnhSign'], '/isisf/', 'SIS');
 assumption('IntISISf', 'Interactive ISISf', 2023, ['Sign', 'PrivEnhSign'], '/TODO/', 'SIS', true);

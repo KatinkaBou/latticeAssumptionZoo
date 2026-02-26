@@ -1,5 +1,6 @@
 ---
 title: "Approximate SIS"
+seo_title: "Approximate SIS"
 family: "SIS"
 
 last_modified_at: 2026-02-26
