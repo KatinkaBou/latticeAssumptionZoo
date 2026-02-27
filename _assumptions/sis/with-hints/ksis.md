@@ -39,4 +39,4 @@ A proof for the module-variant was provided in {% cite EPRINT:2025/1852 %}.
 
 ## Related Assumptions
 
-- [k-LWE](/klwe/)
+- [k-LWE](/TODO/)

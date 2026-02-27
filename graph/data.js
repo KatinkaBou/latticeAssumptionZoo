@@ -6,8 +6,8 @@ var relations = [];
  * - 'full_name': Full name of the assumption (displayed on hover), e.g. 'Short Integer Solution'
  * - 'published': Year of publication, e.g. 1996
  * - 'primitives': Array should contain primitive if a construction exists, which builds on this assumption
- *     List of primitives is currently limited to: Commitment, ZK, Sign, PrivEnhSign, EffEnhSign, TresholdSign, COAD,
- *     KEX, PKE, PrivEnhEnc, EffEnhEnc, TresholdEnc, COED.
+ *     List of primitives is currently limited to: Commitment, ZK, Sign, PrivEnhSign, EffEnhSign,
+ *     TresholdSign, COAD, KEX, PKE, PrivEnhEnc, EffEnhEnc, TresholdEnc, COED.
  *     Please add further / more specific ones as a comment
  * - 'url': URL to lattice assumption zoo page of this assumption
  * - 'group': The single group of assumptions that this assumption belongs to.
@@ -118,12 +118,12 @@ assumption('NFSIS', 'Normal Form SIS', 2001, ['Commitment', 'ZK', 'Sign'], '/sis
 assumption('ISIS', 'Inhomogeneous SIS', 1997, ['Commitment', 'ZK', 'Sign'], '/sis/#inhomogeneous-sis_nmqbeta', 'SIS', true); // Ajtai–Dwork - A Public-Key Cryptosystem with Worst-Case/Average-Case Equivalence
 assumption('ApproxSIS', 'Approximate SIS', 2019, ['Sign'], '/approxsis/', 'SIS');
 
-assumption('k-SIS', 'k-SIS', 2011, ['Sign', 'COAD'], '/ksis/', 'SIS');
+assumption('k-SIS', 'k-SIS', 2011, ['Sign', 'TresholdSign', 'COAD'], '/ksis/', 'SIS');
 
 assumption('ISISf', 'ISISf', 2023, ['Sign', 'PrivEnhSign'], '/isisf/', 'SIS');
-assumption('IntISISf', 'Interactive ISISf', 2023, ['Sign', 'PrivEnhSign'], '/TODO/', 'SIS', true);
+assumption('IntISISf', 'Interactive ISISf', 2023, ['Sign', 'PrivEnhSign'], '/isisf/#interactiveisis_f', 'SIS', true);
 assumption('GenISISf', 'Generalised ISISf', 2025, ['Sign', 'PrivEnhSign'], '/genisisf/', 'SIS');
-assumption('IntGenISISf', 'Interactive GenISISf', 2025, ['Sign', 'PrivEnhSign'], '/TODO/', 'SIS', true);
+assumption('IntGenISISf', 'Interactive GenISISf', 2025, ['Sign', 'PrivEnhSign'], '/genisisf/#interactive-genisis_f', 'SIS', true);
 assumptionFamily('ISISf', ['ISISf', 'IntISISf', 'GenISISf', 'IntGenISISf']);
 
 assumption('OM-ISIS', 'One-More-ISIS', 2022, ['Sign', 'PrivEnhSign'], '/omisis/', 'SIS');
