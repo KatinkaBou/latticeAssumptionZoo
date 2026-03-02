@@ -15,7 +15,11 @@ The k-SIS assumption was introduced in 2011 by Boneh and Freeman {% cite PKC:Bon
 ## Definition
 
 ### k-SIS$_{n,m,q,\beta,s,\mathcal{R}}$
-_Let matrix $\mat{A} \in \mathcal{R}_q^{n \times m}$ be chosen uniformly at random and $k$ hint vectors $\vec{s}_i$ from $D\_{\Lambda_q^\perp(\mat{A}), s}$ with $\norm{\vec{s}_i} \leq \beta$. Given $\mat{A}$ and $\set{\vec{s}\_i}\_{i \in [k]}$, an adversary is asked to find a new short non-zero vector $\vec{s}^* \in \mathcal{R}^m$ satisfying $\mat{A} \cdot \vec{s}^* = \vec{0} \bmod q \land \norm{\vec{s}^*} \leq \beta \land \vec{s}^* \notin \mathcal{K}\text{-span}\left( \set{\vec{s}_i}\_{i \in [k]} \right)$._
+_Let matrix $\mat{A} \in \mathcal{R}_q^{n \times m}$ be chosen uniformly at random and $k$ hint vectors $\vec{s}_i$ from $D\_{\Lambda_q^\perp(\mat{A}), s}$ with $\norm{\vec{s}_i} \leq \beta$. Given $\mat{A}$ and $\set{\vec{s}\_i}\_{i \in [k]}$, an adversary is asked to find a new short non-zero vector $\vec{s}^* \in \mathcal{R}^m$ satisfying_
+
+$$
+\mat{A} \cdot \vec{s}^* = \vec{0} \bmod q \land \norm{\vec{s}^*} \leq \beta \land \vec{s}^* \notin \mathcal{K}\text{-span}\left( \set{\vec{s}_i}_{i \in [k]} \right).
+$$
 
 The provided definition is the module-variant, which was defined by Albrecht et al. {% cite C:ACLMT22 %}. The original version can be recovered by setting $\mathcal{R} = \ZZ$ and $\mathcal{K} = \QQ$.
 

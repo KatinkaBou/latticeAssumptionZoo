@@ -17,7 +17,8 @@ Approximate SIS is an assumption introduced in 2019 by Chen, Genise, and Mukherj
 ## Definition
 
 ### ApproximateSIS$_{n,m,q,\alpha,\beta}$
-_Let matrix $\mat{A} \in \ZZ_q^{n \times m}$ be chosen uniformly at random. An adversary is asked to find a short non-zero vector $\vec{s} \in \ZZ^m$ satisfying $\mat{A} \cdot \vec{s} = \vec{t} \bmod q \land 0 < \norm{\vec{s}} \leq \beta \land \norm{\vec{t}} \leq \alpha$._
+_Let matrix $\mat{A} \in \ZZ_q^{n \times m}$ be chosen uniformly at random. An adversary is asked to find a short non-zero vector $\vec{s} \in \ZZ^m$ satisfying_
+\\[\mat{A} \cdot \vec{s} = \vec{t} \bmod q \land 0 < \norm{\vec{s}} \leq \beta \land \norm{\vec{t}} \leq \alpha.\\]
 
 Approximate SIS intuitively states that it is hard to find a short preimage of $\mat{A}$ of a ball of target vectors surrounding $\vec{0}$. Therefore, Approximate SIS can be seen as a specific multi-instance of [ISIS](/sis/#inhomogeneous-sis_nmqbeta), where the target vectors form a ball around $\vec{0}$.
 
