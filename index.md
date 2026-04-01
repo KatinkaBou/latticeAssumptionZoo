@@ -42,6 +42,6 @@ If you prefer a list as a structured format, you can find a searchable index of 
 [<i class="fas fa-rss"></i> Subscribe via RSS-Feed](/feed.xml){: .btn .btn--info}
 
 ## ✏️ Contribute
-This wiki relies on the expertise of the cryptographic community. Anyone can [contribute](https://github.com/jnsiemer/latticeassumptionzoo/tree/main/CONTRIBUTING.md) -- whether it is adding a novel assumption, updating a hardness estimates, providing further details, or linking a new construction.
+This wiki relies on the expertise of the cryptographic community. Anyone can [contribute](https://github.com/jnsiemer/latticeassumptionzoo/tree/main/CONTRIBUTING.md) -- whether it is adding a novel assumption, updating hardness estimates, providing further details, or linking a new construction.
 
 Spotted a missing link or an outdated result? [Propose a change on GitHub](https://github.com/jnsiemer/latticeassumptionzoo){:target="_blank"}.

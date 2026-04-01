@@ -141,7 +141,7 @@ assumption('NTRU', 'Number Theorists \'R\' Us or Number Theory Research Unit', 1
 
 
 // LIP-based assumptions - family, i.e. last parameter is always 'LIP'
-assumption('LIP', 'Lattice Isomorphism Problem', 2019, ['Sign'], '/lip/', 'LIP'); /*First consideration in crypto-context*/
+assumption('LIP', 'Lattice Isomorphism Problem', 2022, ['Sign', 'PKE', 'FuncEnc', 'COED'], '/lip/', 'LIP'); /*First consideration in crypto-context*/
 
 
 // LPN-based assumptions - family, i.e. last parameter is always 'LPN'
