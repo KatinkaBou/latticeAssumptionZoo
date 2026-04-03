@@ -6,7 +6,7 @@ subfamily: "SIS with Hints"
 graph_id: "ID-in-graph"
 assumption_status: "standard|broken|remove-this-attribute"
 
-last_modified_at: 2026-02-25
+last_modified_at: 2026-04-02
 published: false
 redirect_from:
   - /assumption_template/

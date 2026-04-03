@@ -20,6 +20,7 @@ plugins:
   - jekyll-relative-links
   - jekyll-redirect-from
   - jekyll-seo-tag
+  - jekyll-sitemap
   - jekyll-scholar
   - jekyll-feed
 relative_links:

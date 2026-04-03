@@ -4,7 +4,7 @@ family: "NTRU"
 graph_id: "NTRU"
 assumption_status: "standard"
 
-last_modified_at: 2026-02-27
+last_modified_at: 2026-03-27
 ---
 
 NTRU is a computational problem introduced in 1996 by Hoffstein, Pipher, and Silverman {% cite ANTS:HofPipSil98 %}. Predating [Learning with Errors](/lwe/) by nearly a decade, NTRU relies on the hardness of finding short vectors in a specific class of structured ideal lattices known as "NTRU lattices".

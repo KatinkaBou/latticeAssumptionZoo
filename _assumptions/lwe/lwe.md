@@ -5,7 +5,7 @@ family: "LWE"
 graph_id: "LWE"
 assumption_status: "standard"
 
-last_modified_at: 2026-02-27
+last_modified_at: 2026-03-26
 redirect_from:
   - /learning_with_errors/
   - /learning-with-errors/
