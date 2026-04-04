@@ -86,7 +86,7 @@
     <div id="mynetwork"></div>
     <div id="filters">
       <h2 id="filtersToggle" style="margin-bottom: 5px; margin-top: 0; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 10px;">
-        Lattice Assumption Graph <span id="toggleIcon" style="font-size: 0.7em;">▼</span>
+        Lattice Assumption Graph <span id="toggleIcon" style="font-size: 0.7em;">&#9660;</span>
       </h2>
 
       <div id="filtersContent">
@@ -216,17 +216,17 @@
       filtersToggle.addEventListener("click", () => {
         if (filtersContent.style.display === "none") {
           filtersContent.style.display = "block";
-          toggleIcon.textContent = "▼";
+          toggleIcon.innerHTML = "&#9660;";
         } else {
           filtersContent.style.display = "none";
-          toggleIcon.textContent = "▲";
+          toggleIcon.innerHTML = "&#9650;";
         }
       });
 
       // Toggle filters on mobile
       if (window.matchMedia("(max-width: 768px)").matches) {
         filtersContent.style.display = "none";
-        toggleIcon.textContent = "▲";
+        toggleIcon.innerHTML = "&#9650;";
       }
 
       // Hide the filters div if in an iframe

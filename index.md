@@ -2,7 +2,7 @@
 title: Lattice Assumption Zoo
 ---
 
-This comprehensive wiki catalogues average-case lattice assumptions so that cryptography-affine readers can quickly build an intuition for each assumption, understand the rationale behind its hardness, explore its applications, access all relevant literature in one place, and stay informed on the latest cryptanalysis.
+This comprehensive wiki catalogues average-case lattice assumptions so that cryptography-affine readers can quickly build an intuition for each assumption, understand the rationale behind its hardness, and explore its applications. Additionally, it serves as a centralised repository for essential literature related to novel assumptions, and provides a platform for publishing relevant cryptanalysis.
 
 Furthermore, this resource is built with two additional goals in mind:
 - For **designers**: This website facilitates keeping track of novel assumptions (e.g., by following our [RSS-Feed](/feed.xml)) to encourage reusing established assumptions rather than introducing new, ad-hoc ones.
@@ -40,6 +40,11 @@ If you prefer a list as a structured format, you can find a searchable index of 
 
 [Read all news](/news/){: .btn .btn--info}
 [<i class="fas fa-rss"></i> Subscribe via RSS-Feed](/feed.xml){: .btn .btn--info}
+
+## 🚧 Under Construction
+Please note that this wiki does not cover all lattice-based assumptions yet.
+A list of assumptions that we are aware of and plan to add to the zoo, can be found [here](https://github.com/jnsiemer/latticeAssumptionZoo/issues/1).
+Of course, contributions of any kind are welcome!
 
 ## ✏️ Contribute
 This wiki relies on the expertise of the cryptographic community. Anyone can [contribute](https://github.com/jnsiemer/latticeassumptionzoo/tree/main/CONTRIBUTING.md) -- whether it is adding a novel assumption, updating hardness estimates, providing further details, or linking a new construction.
