@@ -135,9 +135,12 @@ assumptionFamily('OM-ISIS', ['OM-ISIS', 'rOM-ISIS']);
 assumption('LWE', 'Learning with Errors', 2005, ['PKE', 'FuncEnc', 'COED'], '/lwe/', 'LWE');
 assumption('ssLWE', 'Short secret LWE', 2009, ['PKE', 'FuncEnc', 'COED'], '/lwe/#short-secret-lwe_nmqchi', 'LWE', true);
 assumption('LWR', 'Learning with Rounding', 2012, ['PKE'], '/lwr/', 'LWE');
-assumption('Hint-MLWE', 'Hint Learning with Errors', 2023, ['ZK', 'Sign', 'TresholdSign'], '/hint-mlwe/', 'LWE');
+assumption('Hint-LWE', 'Hint Learning with Errors', 2023, ['ZK', 'Sign', 'TresholdSign'], '/hint-mlwe/', 'LWE');
+assumption('Coset-Hint-LWE', 'Coset Hint Learning with Errors', 2025, ['TresholdEnc'], '/hint-mlwe/#coset-hint-mlwe', 'LWE', true);
+assumption('Leaky-LWE', 'Leaky Learning with Errors', 2023, ['ZK', 'Sign', 'TresholdSign'], '/leaky-lwe/', 'LWE');
 
-// assumptionFamily('LeakyLWE', ['Leaky-LWE', 'Hint-MLWE']);
+
+assumptionFamily('LeakyLWE', ['Leaky-LWE', 'Hint-MLWE','Coset-Hint-LWE']);
 
 // NTRU-based assumptions - family, i.e. last parameter is always 'NTRU'
 assumption('NTRU', 'Number Theorists \'R\' Us or Number Theory Research Unit', 1996, ['Sign', 'PKE', 'COED'], '/ntru/', 'NTRU');
@@ -172,13 +175,18 @@ reducesTo('LWR', 'LWE');
 
 reducesTo('NTRU', 'LWE', 400);
 
+reducesTo('LWE', 'Hint-LWE');
+reducesTo('Hint-LWE', 'Coset-Hint-LWE');
+
+reducesTo('LWE','Leaky-LWE');
 
 // Partial Reductions - "partially reduces to"
 partiallyReducesTo('SIS', 'GenISISf', 'f = RO or f = A_m * x + u');
 partiallyReducesTo('SIS', 'ISISf', 'f = RO');
 
-partiallyReducesTo('LWE', 'Hint-MLWE', 'secrets/errors follow Discrete Gaussian Distributions');
+
 
 // Generalisations - "generalised by"
 generalisedBy('ISISf', 'GenISISf', 200);
 generalisedBy('LPN', 'LWE', 400);
+generalisedBy('Hint-LWE', 'Leaky-LWE', 200);
