@@ -18,9 +18,11 @@ If you are referring to other problems or websites, please [link](/sis/) to them
 
 ## Definition
 
-### Abbreviation$_{\mathsf{params}}$
-_A formal definition of the assumption using math with math delimiters $a = b$, \\(b = c\\), or \\[c = d.\\]_
-If you're ever missing braces $\\{\\}$ or subscripts SIS$\_{n,m,q,\beta}$ or $\*$, make sure to escape these properly s.t. the markdown compiler doesn't assume these are markdown.
+### Abbreviation$$_{\mathsf{params}}$$ {#abbreviation}
+_A formal definition of the assumption using math with math delimiters $$a = b$$, \\(b = c\\), or \\[c = d.\\]_
+Centered math with important formulas requires a newline before and after the math delimiter:
+
+$$ \mat{A} \cdot \vec{s} = \vec{0} \bmod q$$
 
 ## Variants (Optional)
 
@@ -41,7 +43,7 @@ A list of constructions whose security is based on the assumption or described v
 ## Related Assumptions (Optional)
 
 If there are any immediately related assumptions, list them here (potentially with a brief description of their relationship or key differences), e.g.
-- [Randomised One-More-ISIS](/rom-isis/) doubles the length of matrix $\mathbf{A}$ and requires the vector multiplied by the second part to be binary (compared to One-More-ISIS).
+- [Randomised One-More-ISIS](/rom-isis/) doubles the length of matrix $$\mathbf{A}$$ and requires the vector multiplied by the second part to be binary (compared to One-More-ISIS).
 
 ## Further Reading Suggestions (Optional)
 
