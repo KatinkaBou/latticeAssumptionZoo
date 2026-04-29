@@ -91,9 +91,11 @@ function assumptionFamily(familyID, members, edgeLength = 50) {
 
   assumptions.push({
     id: anchorId,
+    shape: 'dot',
     hidden: true,
-    shape: 'dot',   // Fallback in case 'hidden' behaves unexpectedly
-    size: 0         
+    year_published: 1995,
+    is_variant: false,
+    primitives: ['assumptionFamilyNode'],
   });
 
   members.forEach(function(memberId) {
@@ -103,6 +105,7 @@ function assumptionFamily(familyID, members, edgeLength = 50) {
       hidden: true,
       physics: true,
       length: edgeLength,
+      relation: "assumptionFamilyEdge",
     });
   });
 }
