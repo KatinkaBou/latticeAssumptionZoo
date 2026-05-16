@@ -59,6 +59,7 @@ The targets of the Decomposed instance are constructed as $$\vec{b}_{i,j}' = \ve
 - Attribute-based Encryption (ABE) with additional properties {% cite C:AbrMalRoy25 %}{% cite EC:Wee25 %}
 - Constrained PRF {% cite EPRINT:2026/741 %}
 - Broadcast Encryption {% cite EPRINT:2026/741 %}{% cite EPRINT:2026/862 %}
+- Distributed Monotone-Policy Encryption {% cite EC:ChaWu26 %}
 
 ## Related Assumptions
 
