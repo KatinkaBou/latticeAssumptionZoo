@@ -40,6 +40,7 @@ The hardness of One-More-ISIS is analysed using direct cryptanalysis in the orig
 - One-More-RSA {% cite JC:BNPS03 %} inspired One-More-ISIS
 - [Interactive ISIS$$_f$$](/isisf/#interactive-isis_f) shares similar interaction capabilities with One-More-ISIS
 - [Interactive GenISIS$$_f$$](/genisisf/#interactive-genisis_f) shares similar interaction capabilities with One-More-ISIS
+- [H-ISIS](/h-isis/) provides SIS hints and asks for an ISIS solution
 
 ## Further Reading Suggestions
 

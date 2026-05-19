@@ -11,7 +11,7 @@ redirect_from:
   - /h_isis/
 ---
 
-The H-ISIS assumption was introduced by Albrecht, Lai, and Postlethwaite in 2026 {% cite EPRINT:2026/187 %}. The assumption provides a polynomial number of preimages of $$\vec{0}$$ along with an [ISIS](/isis/) challenge matrix and asks for a preimage of a random target.
+The H-ISIS assumption was introduced by Albrecht, Lai, and Postlethwaite in 2026 {% cite EPRINT:2026/187 %}. The assumption provides a polynomial number of preimages of $$\vec{0}$$ along with an [ISIS](/sis/#inhomogeneous-sis) challenge matrix and asks for a preimage of a random target.
 
 There is a reduction from the [_space-time hardness of SIS_](#space-time-hardness): the assumption that SIS is not solvable in $$2^{\bigO{m}}$$ time and polynomial memory. If further $$m \in o(n \log n)$$ then this conjecture is implied by the conjectured space-time hardness of worst-case lattice problems, previously considered in the literature and explicitly conjectured by Lombardi and Vaikuntanathan {% cite C:LomVai20 %}.
 
