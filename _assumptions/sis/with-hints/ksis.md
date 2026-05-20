@@ -4,7 +4,7 @@ seo_title: "k-SIS"
 family: "SIS"
 subfamily: "SIS with Hints"
 graph_id: "k-SIS"
-assumption_status: "standard"
+assumption_status: "implied"
 
 last_modified_at: 2026-02-26
 redirect_from:

@@ -26,6 +26,7 @@ permalink: /catalogue/
   }
   .status-broken { background-color: #d9534f; }
   .status-standard { background-color: #5cb85c; }
+  .status-implied { background-color: #5c9abd; }
 </style>
 
 The Lattice Assumption Zoo currently catalogues {{ site.assumptions.size }} assumptions; <span id="variants-count">couting...</span> counting non-trivial variants.<!-- excluding ring-/module-variants or equivalent search/decision versions -->
@@ -49,7 +50,8 @@ The Lattice Assumption Zoo currently catalogues {{ site.assumptions.size }} assu
 </script>
 
 ### Tags Explained
-<span class="status-badge status-standard">standard</span> tags mark standard assumptions and assumptions with a known reduction from a standard assumption that does not impose unusually strict conditions on the parameters.<br>
+<span class="status-badge status-standard">standard</span> tags mark assumptions that can be reduced to long-standing, open problems and have undergone significant cryptanalytic effort.<br>
+<span class="status-badge status-implied">implied</span> tags mark assumptions with a reduction from a standard assumption that does not impose unusually strict conditions on parameter choices.<br>
 <span class="status-badge status-broken">broken</span> tags mark assumptions that have been compromised by known attacks.
 
 ### List of Catalogued Assumptions

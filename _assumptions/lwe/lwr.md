@@ -3,7 +3,7 @@ title: "Learning with Rounding (LWR)"
 seo_title: "Learning with Rounding"
 family: "LWE"
 graph_id: "LWR"
-assumption_status: "standard"
+assumption_status: "implied"
 
 last_modified_at: 2026-04-11
 redirect_from:
