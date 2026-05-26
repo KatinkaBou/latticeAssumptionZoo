@@ -29,7 +29,7 @@ The multi-target approach roughly outlines the intuition that $$t$$-M-ISIS can a
 
 ## Variants
 
-### $$t$$-M-SPISIS$$_{n,m,q,\beta,\mathcal{R}}$$ {#t-m-spisis}
+### $$t$$-M-SPISIS$$_{n,m,q,\beta,\sigma,\mathcal{R}}$$ {#t-m-spisis}
 _Let matrix $$\mat{A} \in \mathcal{R}_q^{n \times m}$$ and a set of $$t$$ target vectors $$\mathcal{T} \subsetneq \mathcal{R}_q^n$$ be chosen uniformly at random with $$\abs{\mathcal{T}} = t$$ and $$\vec{s}_i \sample D_{\Lambda_q^{\vec{t}_i}(\mat{A}), \sigma}$$ for all $$\vec{t}_i \in \mathcal{T}$$. Given $$\mat{A}$$, $$\mathcal{T}$$, and $$\set{\vec{s}_i}_i$$, an adversary is asked to find a short vector $$\vec{s} \in \mathcal{R}^m$$ satisfying_
 
 $$ \mat{A} \cdot \vec{s} \in \mathcal{T} \bmod q \land \vec{s} \notin \set{\vec{s}_i}_i \land \norm{\vec{s}} \leq \beta. $$
