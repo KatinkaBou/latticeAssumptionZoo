@@ -122,6 +122,10 @@ assumption('ISIS', 'Inhomogeneous SIS', 1997, ['Commitment', 'ZK', 'Sign'], '/si
 
 assumption('ApproxSIS', 'Approximate SIS', 2019, ['Sign'], '/approxsis/', 'SIS');
 
+assumption('Split-SIS', 'Split-SIS', 2015, ['PrivEnhSign'], '/split-sis/', 'SIS');
+assumption('Extended-Split-SIS', 'Extended Split-SIS', 2016, ['PrivEnhSign'], '/split-sis/#extended-split-sis', 'SIS', true);
+assumptionFamily('Split-SIS', ['Split-SIS', 'Extended-Split-SIS']);
+
 assumption('t-M-ISIS', 't-Module ISIS', 2024, ['Sign'], '/t-misis/', 'SIS');
 assumption('t-M-SPISIS', 't-Module Second Preimage ISIS', 2024, ['Sign'], '/t-misis/#t-m-spisis', 'SIS', true);
 assumptionFamily('t-M-ISIS', ['t-M-ISIS', 't-M-SPISIS']);
@@ -197,6 +201,9 @@ reducesTo('SIS', 'NFSIS');
 reducesTo('SIS', 'ISIS');
 
 reducesTo('SIS', 'ApproxSIS');
+
+reducesTo('SIS', 'Split-SIS');
+reducesTo('SIS', 'Extended-Split-SIS');
 
 reducesTo('SIS', 't-M-ISIS');
 reducesTo('SIS', 't-M-SPISIS');
