@@ -162,6 +162,8 @@ assumption('h-PRISIS', 'h-PRISIS', 2024, ['Commitment'], '/h-basis/#h-prisis', '
 assumption('l-succinct-SIS', 'l-succinct SIS', 2024, ['Commitment'], '/l-succinct-sis/', 'SIS');
 assumptionFamily('BASIS', ['BASIS', 'BASIS_rand', 'BASIS_struct', 'BASIS_power', 'h-BASIS', 'h-PRISIS', 'l-succinct-SIS']);
 
+assumption('Evasive-SIS', 'Evasive SIS', 2022, ['Sign'], '/evasive-sis/', 'SIS');
+
 
 // LWE-based assumptions - family, i.e. last parameter is always 'LWE'
 assumption('LWE', 'Learning with Errors', 2005, ['PKE', 'FuncEnc', 'COED'], '/lwe/', 'LWE');
@@ -277,6 +279,8 @@ partiallyReducesTo('SIS', 'ISISf', 'f = RO', 300);
 partiallyReducesTo('SIS', 'BASIS', 'SIS reduces to BASIS_rand and M-SIS to PRISIS for l=2');
 partiallyReducesTo('SIS', 'BASIS_power', 'M-SIS reduces to PRISIS for l=2', 300);
 partiallyReducesTo('SIS', 'h-PRISIS', 'M-SIS reduces to h-PRISIS for l=2', 300);
+
+partiallyReducesTo('Evasive-LWE', 'Evasive-SIS', 'Public-coin Evasive LWE (quantumly) heuristically reduces to Evasive SIS', 300); // to come
 
 // LWE
 partiallyReducesTo('LWE', 'l-succinct-LWE', 'If W is wide and embeds a trapdoor', 300);
