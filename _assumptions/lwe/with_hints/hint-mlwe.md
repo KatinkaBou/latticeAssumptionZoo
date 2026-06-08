@@ -97,4 +97,4 @@ The hardness was also proven for non-noisy leakages for some specific regimes (w
 The adaptive case has been studied in {% cite PQC:BouKel25 %} and {% cite CiC:LaiSwaWoo25 %}.
 
 - [Leaky LWE](/leaky-lwe/) yields a generalisation of Hint-MLWE extending the notion of linear leakages over the secret/error pair and allowing for a wider range of hints.
-- [Error-Leakage LWE](/TODO/) is a similar assumption restricting to leakage on the error-term of LWE.
+- [Error-Leakage LWE](/ellwe/) is a similar assumption restricting to leakage on the error-term of LWE.

@@ -62,7 +62,7 @@ Further, the authors {% cite EPRINT:2026/187 %} essentially provide a lower boun
 
 ## Constructions built from H-ISIS {#constructions}
 
-- Proof-friendly [ISIS$$_\mathsf{bin}$$](/isisf/#hardness)-style signature {% cite TODO %}
+- H-ISIS suggests that double-signing for GPV-style signatures with tight norm bound and without any salt should be secure 
 
 ## Related Assumptions
 
