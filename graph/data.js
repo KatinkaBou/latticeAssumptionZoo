@@ -184,10 +184,10 @@ assumption('Coset-Hint-LWE', 'Coset Hint Learning with Errors', 2025, ['Treshold
 assumption('Leaky-LWE', 'Leaky Learning with Errors', 2023, ['FuncEnc', 'TresholdEnc'], '/leaky-lwe/', 'LWE');
 assumptionFamily('LeakyLWE', ['Leaky-LWE', 'Hint-MLWE','Coset-Hint-LWE', 'elLWE']);
 
-assumption('l-Decomposed-LWE', 'l-Decomposed-LWE', 2025, ['FuncEnc', 'EffEnhEnc','TresholdEnc'], '/decomposed-lwe/', 'LWE');
-assumption('ssE-l-Decomposed-LWE', 'Small-Secret Extended l-Decomposed-LWE', 2025, ['FuncEnc', 'EffEnhEnc','TresholdEnc'], '/decomposed-lwe/#sse-decomposed-lwe', 'LWE', true);
-assumption('ssC-l-Decomposed-LWE', 'Small-Secret Circular l-Decomposed-LWE', 2025, ['FuncEnc', 'EffEnhEnc','TresholdEnc'], '/decomposed-lwe/#ssc-decomposed-lwe', 'LWE', true);
-assumptionFamily('l-Decomposed-LWE', ['l-Decomposed-LWE', 'ssE-l-Decomposed-LWE', 'ssC-l-Decomposed-LWE']);
+assumption('Decomposed-LWE', 'Decomposed-LWE', 2025, ['FuncEnc', 'EffEnhEnc','TresholdEnc'], '/decomposed-lwe/', 'LWE');
+assumption('ssE-Decomposed-LWE', 'Small-Secret Extended Decomposed-LWE', 2025, ['FuncEnc', 'EffEnhEnc','TresholdEnc'], '/decomposed-lwe/#sse-decomposed-lwe', 'LWE', true);
+assumption('ssC-Decomposed-LWE', 'Small-Secret Circular Decomposed-LWE', 2025, ['FuncEnc', 'EffEnhEnc','TresholdEnc'], '/decomposed-lwe/#ssc-decomposed-lwe', 'LWE', true);
+assumptionFamily('Decomposed-LWE', ['Decomposed-LWE', 'ssE-Decomposed-LWE', 'ssC-Decomposed-LWE']);
 
 assumption('l-succinct-LWE', 'l-succinct LWE', 2024, ['FuncEnc', 'EffEnhEnc'], '/l-succinct-lwe/', 'LWE');
 
@@ -266,7 +266,7 @@ reducesTo('LWE','Leaky-LWE');
 
 reducesTo('Evasive-LWE', 'l-succinct-LWE'); // to come
 
-reducesTo('l-Decomposed-LWE', 'ssE-l-Decomposed-LWE');
+reducesTo('Decomposed-LWE', 'ssE-Decomposed-LWE');
 
 reducesTo('LWE', 'Hollow-LWE');
 
@@ -300,7 +300,7 @@ partiallyReducesTo('LWE', 'Tensor-LWE', 'If all x_i are equal', 400);
 // LWE
 partiallyReducesTo('LWE', 'l-succinct-LWE', 'If W is wide and embeds a trapdoor', 300);
 
-partiallyReducesTo('l-succinct-LWE', 'l-Decomposed-LWE', 'For super-polynomial modulus to noise ratio');
+partiallyReducesTo('l-succinct-LWE', 'Decomposed-LWE', 'For super-polynomial modulus to noise ratio');
 
 
 // Generalisations - "generalised by"
