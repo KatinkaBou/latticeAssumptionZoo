@@ -32,7 +32,7 @@ _Let $$\chi,\chi'$$ be distributions over $$\ZZ$$ and $$\adv = (\adv_0, \adv_1)$
 
 $$ \left( \mat{A}, \mat{A} \cdot \vec{s} + \vec{e}, \vec{z}, \mat{Z} \cdot \vec{e} + \vec{e}' \right) \text{ and } \left( \mat{A}, \vec{u}, \vec{z}, \mat{Z} \cdot \vec{e} + \vec{e}' \right). $$
 
-The Multi-Hint Extended-LWE assumption is introduced in {% cite C:AgrLibSte16 %} with $$\chi := D_{\ZZ,s}$$, no error term on the hint $$\chi' := \set{0}$$, and arbitrary distribution $$\adv_0 := \tau$$. They provide a reduction from LWE to Multi-Hint Extended LWE in Theorem 4.
+The Multi-Hint Extended-LWE assumption is introduced in {% cite C:AgrLibSte16 %} with $$\chi := D_{\ZZ,s}$$, no error term on the hint $$\chi' := \set{0}$$, and arbitrary distribution $$\adv_0 := \tau$$. They provide a reduction from LWE to Multi-Hint Extended LWE in Theorem 4. Further results on the hardness of the ring-version of this problem were formalised in Theorem 1 of {% cite PKC:MKMS22 %}.
 
 ## Hardness
 
@@ -49,7 +49,7 @@ Due to the varying definitions of Extended LWE, we group the results by definiti
 
 - Zero-Knowledge Proofs {% cite PKC:LyuNguSei21 %}{% cite C:LyuNguPla22 %}
 - Public-Key Encryption {% cite C:ONePeiWat11 %}
-- Functional Encryption for inner products {% cite PKC:AlpPei12 %}{% cite C:AgrLibSte16 %}
+- Functional Encryption for inner products {% cite PKC:AlpPei12 %}{% cite C:AgrLibSte16 %}{% cite PKC:MKMS22 %}
 
 ## Related Assumptions
 
