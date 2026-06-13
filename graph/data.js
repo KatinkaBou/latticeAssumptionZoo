@@ -210,16 +210,12 @@ assumption('Strong-Tensor-LWE', 'Strong Tensor LWE', 2023, ['FuncEnc', 'EffEnhEn
 assumption('Circular-Tensor-LWE', 'Circular Tensor LWE', 2024, ['FuncEnc'], '/tensor-lwe/#circular-tensor-lwe', 'LWE', true);
 assumptionFamily('Tensor-LWE', ['Tensor-LWE', 'Strong-Tensor-LWE', 'Circular-Tensor-LWE']);
 
-// NTRU-based assumptions - family, i.e. last parameter is always 'NTRU'
-assumption('NTRU', 'Number Theorists \'R\' Us or Number Theory Research Unit', 1996, ['Sign', 'PKE', 'COED'], '/ntru/', 'NTRU');
-
-
-// LIP-based assumptions - family, i.e. last parameter is always 'LIP'
-assumption('LIP', 'Lattice Isomorphism Problem', 2022, ['Sign', 'PKE', 'FuncEnc', 'COED'], '/lip/', 'LIP'); /*First consideration in crypto-context*/
-
-
-// LPN-based assumptions - family, i.e. last parameter is always 'LPN'
-assumption('LPN', 'Learning Parity with Noise', 2000, ['Commitment', 'ZK'], '/lpn/', 'LPN'); /*First consideration in crypto-context*/
+// Standalone assumptions - family, i.e. last parameter is always 'Standalone'
+assumption('NTRU', 'Number Theorists \'R\' Us or Number Theory Research Unit', 1996, ['Sign', 'PKE', 'COED'], '/ntru/', 'Standalone');
+assumption('LIP', 'Lattice Isomorphism Problem', 2022, ['Sign', 'PKE', 'FuncEnc', 'COED'], '/lip/', 'Standalone'); /*First consideration in crypto-context*/
+assumption('LPN', 'Learning Parity with Noise', 2000, ['Commitment', 'ZK'], '/lpn/', 'Standalone'); /*First consideration in crypto-context*/
+assumption('LVP', 'Large Vector Problem', 2021, ['PKE'], '/lvp/', 'Standalone');
+assumptionFamily('Standalone Problems', ['NTRU', 'LIP', 'LPN', 'LVP'], 100);
 
 
 
