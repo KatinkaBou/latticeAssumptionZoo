@@ -175,7 +175,7 @@ assumption('Evasive-SIS', 'Evasive SIS', 2022, ['Sign'], '/evasive-sis/', 'SIS')
 assumption('LWE', 'Learning with Errors', 2005, ['PKE', 'FuncEnc', 'COED'], '/lwe/', 'LWE');
 assumption('ssLWE', 'Short secret LWE', 2009, ['PKE', 'FuncEnc', 'COED'], '/lwe/#short-secret-lwe', 'LWE', true);
 assumption('LWR', 'Learning with Rounding', 2012, ['PKE'], '/lwr/', 'LWE');
-assumption('LwAM', 'Learning with Alternating Moduli', 2025, ['Commitment'], '/lwam/', 'LWE'); // list of constructions is "PRF" right now, which doesn't really fit into any current category
+assumption('LWAM', 'Learning with Alternating Moduli', 2025, ['Commitment'], '/lwam/', 'LWE'); // list of constructions is "PRF" right now, which doesn't really fit into any current category
 
 assumption('Binary-Matrix-LWE', 'Binary-Matrix LWE', 2013, ['PKE'], '/binary-matrix-lwe/', 'LWE');
 
@@ -204,6 +204,8 @@ assumption('Sparse-Matrix-LWE', 'Sparse Matrix LWE', 2024, ['COED'], '/sparse-ma
 assumption('Hollow-LWE', 'Hollow LWE', 2025, ['PKE'], '/hollow-lwe/', 'LWE');
 
 assumption('Circular-LWE', 'Circular (Small-Secret) LWE', 2023, ['FuncEnc'], '/circular-lwe/', 'LWE');
+
+assumption('LWE-OD', 'Learning with Errors with Output Dependencies', 2026, ['PKE'], '/lwe-od/', 'LWE'); // list of constructions is empty unless one counts constructions from LWE and LWR
 
 assumption('Tensor-LWE', 'Tensor LWE', 2022, ['FuncEnc', 'EffEnhEnc'], '/tensor-lwe/', 'LWE');
 assumption('Strong-Tensor-LWE', 'Strong Tensor LWE', 2023, ['FuncEnc', 'EffEnhEnc'], '/tensor-lwe/#strong-tensor-lwe', 'LWE', true);
@@ -260,7 +262,7 @@ reducesTo('Decomposed-SIS', 'Extended-Decomposed-SIS', 300);
 reducesTo('LWE', 'SIS', 1000);
 reducesTo('ssLWE', 'LWE');
 reducesTo('LWE', 'LWR');
-reducesTo('LWE', 'LwAM');
+reducesTo('LWE', 'LWAM');
 
 reducesTo('LWE', 'Binary-Matrix-LWE');
 
@@ -310,6 +312,8 @@ partiallyReducesTo('SIS', 'BASIS_power', 'M-SIS reduces to PRISIS for l=2', 300)
 partiallyReducesTo('SIS', 'h-PRISIS', 'M-SIS reduces to h-PRISIS for l=2', 300);
 
 partiallyReducesTo('Evasive-LWE', 'Evasive-SIS', 'Public-coin Evasive LWE (quantumly) heuristically reduces to Evasive SIS', 300); // to come
+
+partiallyReducesTo('LWE', 'LWE-OD', 'Constraints detailed in Theorem 3 of the paper', 300);
 
 partiallyReducesTo('LWE', 'Tensor-LWE', 'If all x_i are equal', 400);
 
