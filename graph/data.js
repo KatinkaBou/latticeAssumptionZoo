@@ -214,6 +214,10 @@ assumptionFamily('Tensor-LWE', ['Tensor-LWE', 'Strong-Tensor-LWE', 'Circular-Ten
 
 assumption('SP-RLWE', 'Secret-Power Ring-LWE', 2026, ['PrivEnhEnc'], '/sp-rlwe/', 'LWE');
 assumption('wSP-RLWE', 'Weak Secret-Power Ring-LWE', 2026, ['PrivEnhEnc'], '/sp-rlwe/#wsp-rlwe', 'LWE', true);
+assumption('SSP-RLWE', 'Specialised Secret-Power Ring-LWE', 2025, ['PrivEnhEnc'], '/sp-rlwe/#ssp-rlwe', 'LWE', true);
+assumption('SCSP-RLWE', 'Specialised Circular Secret-Power Ring-LWE', 2025, ['PrivEnhEnc'], '/sp-rlwe/#scsp-rlwe', 'LWE', true);
+assumption('P-RLWE', 'Power Ring-LWE', 2024, ['PrivEnhEnc'], '/p-rlwe/', 'LWE');
+assumptionFamily('Power-LWE', ['SP-RLWE', 'wSP-RLWE', 'SSP-RLWE', 'SCSP-RLWE', 'P-RLWE']);
 
 // Standalone assumptions - family, i.e. last parameter is always 'Standalone'
 assumption('NTRU', 'Number Theorists \'R\' Us or Number Theory Research Unit', 1996, ['Sign', 'PKE', 'COED'], '/ntru/', 'Standalone');

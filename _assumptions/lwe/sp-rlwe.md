@@ -31,6 +31,20 @@ $$ (M \cdot \mu + e) \text{ and } \mathcal{U}\left( \mathcal{R}_q \right). $$
 
 The construction in {% cite EPRINT:ABCR26 %} relies on a slightly weaker assumption, which does not assume that the terms $$M \cdot (1/\mu)^i + e_i$$ are computationally indistinguishable from uniform.
 
+---
+
+The following variants were introduced by Ishai, Li, and Lin in {% cite C:IshLiLin25 %} and they claim it to be a specialisation of [Power Ring-LWE](/p-rlwe/). However, these assumptions are significantly closer to Secret-Power Ring-LWE and therefore listed here. These assumptions were also utilised in {% cite AC:LXYYZ25 %}. Their hardness was not discussed in any paper.
+
+### Specialised Secret-Power Ring-LWE$$_{m,q,\chi_s,\chi_e,\mathcal{R}}$$ {#ssp-rlwe}
+_Let $$\chi_s, \chi_e$$ be distributions over $$\mathcal{R}$$. Sample $$\vec{a} \sample \mathcal{R}_q^m$$, $$s \sample \chi_s$$, $$\vec{e}_0, \vec{e}_1 \sample \chi_e^m$$. An adversary is asked to distinguish between the distribution_
+
+$$ \set{ \vec{a}, s \cdot \vec{a} + \vec{e}_0, s^2 \cdot \vec{a} + \vec{e}_1 }_\lambda \text{ and } \mathcal{U}\left(\mathcal{R}_q^m\right) \times \mathcal{U}\left(\mathcal{R}_q^m\right) \times \mathcal{U}\left(\mathcal{R}_q^m\right). $$
+
+### Specialised Circular-Secret-Power Ring-LWE$$_{m,p,q,\chi_s,\chi_e,\mathcal{R}}$$ {#scsp-rlwe}
+_Let $$\chi_s, \chi_e$$ be distributions over $$\mathcal{R}$$. Sample $$\vec{a} \sample \mathcal{R}_q^m$$, $$s \sample \chi_s$$, $$\vec{e}_0, \vec{e}_1 \sample \chi_e^m$$. An adversary is asked to distinguish between the distribution_
+
+$$ \set{ \vec{a}, s \cdot \vec{a} + \vec{e}_0, s^2 \cdot \vec{a} + \vec{e}_1 + \frac{q}{p} \cdot s }_\lambda \text{ and } \mathcal{U}\left(\mathcal{R}_q^m\right) \times \mathcal{U}\left(\mathcal{R}_q^m\right) \times \mathcal{U}\left(\mathcal{R}_q^m\right). $$
+
 ## Hardness
 
 The authors of {% cite EPRINT:ABCR26 %} describe their cryptanalytic attempts to break the assumption in Section 4. They state that "aside from low norm linear dependencies, we do not know any other attacks from the literature that exploit correlations between secrets" and that they could not achieve any non-trivial attacks. In their parameter set, the modulus $$q$$ is superpolynomial but they state that they believe "the assumption to plausibly hold in any parameter setting where the standard ring-LWE assumption holds (perhaps up to a tiny speedup of $$\sqrt{m}$$, $$m$$ being the maximum degree of $$\mu−1$$,
@@ -42,4 +56,4 @@ by adapting the generic attack of {% cite EC:Cheon06 %} on power-DDH to the ring
 
 ## Related Assumptions
 
-- [Power Ring-LWE](/TODO/) exponentiates the term $$M$$ rather than the secret.
+- [Power Ring-LWE](/p-rlwe/) exponentiates the term $$M$$ rather than the secret.
