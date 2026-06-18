@@ -185,6 +185,8 @@ assumption('Asymmetric-LWE', 'Asymmetric LWE', 2020, ['Sign', 'PKE'], '/asymmetr
 
 assumption('qLWE', 'qLWE', 2025, ['PKE'], '/qlwe/', 'LWE'); // list of constructions is empty unless one counts constructions from LWE
 
+assumption('FAE-LWE', 'First-are-errorless LWE', 2013, ['COED'], '/first-are-errorless-lwe/', 'LWE');
+
 assumption('Extended-LWE', 'Extended LWE', 2011, ['ZK', 'PKE', 'FuncEnc'], '/extended-lwe/', 'LWE');
 assumption('MH-Ext-LWE', 'Multi-Hint Extended LWE', 2016, ['ZK', 'PKE', 'FuncEnc'], '/extended-lwe/#multi-hint-extended-lwe', 'LWE', true);
 assumptionFamily('Extended-LWE', ['Extended-LWE', 'MH-Ext-LWE']);
@@ -282,6 +284,9 @@ reducesTo('LWE', 'k-LWE');
 reducesTo('LWE', 'Asymmetric-LWE');
 
 reducesTo('LWE', 'qLWE');
+
+reducesTo('LWE', 'FAE-LWE');
+reducesTo('FAE-LWE', 'Extended-LWE');
 
 reducesTo('LWE', 'Extended-LWE', 200);
 reducesTo('LWE', 'MH-Ext-LWE', 200);
