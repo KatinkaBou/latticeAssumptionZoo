@@ -151,7 +151,8 @@ assumptionFamily('ISISf', ['ISISf', 'IntISISf', 'GenISISf', 'IntGenISISf']);
 
 assumption('OM-ISIS', 'One-More-ISIS', 2022, ['Sign', 'PrivEnhSign'], '/omisis/', 'SIS');
 assumption('rOM-ISIS', 'Randomised One-More-ISIS', 2024, ['Sign', 'PrivEnhSign'], '/romisis/', 'SIS');
-assumptionFamily('OM-ISIS', ['OM-ISIS', 'rOM-ISIS']);
+assumption('AOM-MSIS', 'Algebraic One-More MSIS', 2025, ['TresholdSign'], '/aommsis/', 'SIS');
+assumptionFamily('OM-ISIS', ['OM-ISIS', 'rOM-ISIS','AOM-MSIS']);
 
 assumption('BASIS', 'Basis-Augmented SIS', 2023, ['Commitment'], '/basis/', 'SIS');
 assumption('BASIS_rand', 'BASIS_rand', 2023, ['Commitment'], '/basis/#BASIS_rand', 'SIS', true);
@@ -184,6 +185,10 @@ assumption('l-Decomposed-LWE', 'l-Decomposed-LWE', 2025, ['FuncEnc', 'EffEnhEnc'
 assumption('ssE-l-Decomposed-LWE', 'Small-Secret Extended l-Decomposed-LWE', 2025, ['FuncEnc', 'EffEnhEnc','TresholdEnc'], '/decomposed-lwe/#sse-decomposed-lwe', 'LWE', true);
 assumption('ssC-l-Decomposed-LWE', 'Small-Secret Circular l-Decomposed-LWE', 2025, ['FuncEnc', 'EffEnhEnc','TresholdEnc'], '/decomposed-lwe/#ssc-decomposed-lwe', 'LWE', true);
 assumptionFamily('l-Decomposed-LWE', ['l-Decomposed-LWE', 'ssE-l-Decomposed-LWE', 'ssC-l-Decomposed-LWE']);
+
+assumption('AOM-MLWE', 'Algebraic One-More MLWE', 2025, ['TresholdSign'], '/aom-lwe/', 'LWE');
+assumption('AOM-UMLWE', 'Algebraic One-More Uniform-MLWE', 2025, ['TresholdSign'], '/aom-lwe/#algebraic-one-more-uniform-mlwe', 'LWE', true);
+assumptionFamily('AOM-MLWE', ['AOM-MLWE','AOM-UMLWE']);
 
 assumption('l-succinct-LWE', 'l-succinct LWE', 2024, ['FuncEnc', 'EffEnhEnc'], '/l-succinct-lwe/', 'LWE');
 
@@ -258,6 +263,11 @@ reducesTo('l-Decomposed-LWE', 'ssE-l-Decomposed-LWE');
 reducesTo('LWE', 'Hollow-LWE');
 
 reducesTo('LWE', 'Sparse-Matrix-LWE');
+
+reducesTo('AOM-UMLWE','AOM-MLWE');
+reducesTo('AOM-MSIS','AOM-MLWE');
+reducesTo('SIS','AOM-MSIS');
+reducesTo('LWE','AOM-MSIS');
 
 // NTRU
 reducesTo('NTRU', 'LWE', 500);
