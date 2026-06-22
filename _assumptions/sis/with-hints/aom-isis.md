@@ -5,7 +5,7 @@ family: "SIS"
 subfamily: "SIS with Hints"
 graph_id: "AOM-MISIS"
 
-last_modified_at: 2026-02-27
+last_modified_at: 2026-06-22
 redirect_from:
   - /algebraic-one-more-isis/
   - /algebraic_one_more_isis/
