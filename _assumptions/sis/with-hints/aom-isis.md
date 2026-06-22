@@ -17,7 +17,7 @@ redirect_from:
   - /algebraic_one_more_module_isis/
 ---
 
-Algebraic One-More-MISIS (AOM-ISIS) was introduced in 2025 by Zhu, and Tessaro {% cite C:ZhuTes25 %}, extending the notion of Algebraic One-More Preimage Resistance {% cite EC:TesZhu23 %} for (lattice-based) hash-function. Given $$k$$ [normal-form MSIS]({#normal-form-sis}) targets and access to an oracle that can solve $$k$$ linear combinations of the secrets, the assumption states that it remains hard to find a short solution for another bounded linear combination of the inputs, excluding trivial induced solutions.
+Algebraic One-More-MISIS (AOM-ISIS) was introduced in 2025 by Zhu, and Tessaro {% cite C:ZhuTes25 %}, extending the notion of Algebraic One-More Preimage Resistance {% cite EC:TesZhu23 %} for (lattice-based) hash-function. Given $$k$$ [normal-form MSIS](/sis/#normal-form-sis) targets and access to an oracle that can solve $$k$$ linear combinations of the secrets, the assumption states that it remains hard to find a short solution for another bounded linear combination of the inputs, excluding trivial induced solutions.
 
 ## Definition
 
@@ -38,7 +38,7 @@ $$\|\vec{s}^*\| \leq \beta_\vec{s}, \|(b^*_i \cdot \sigma_1, \dots, b^*_{k-1} \c
 
 ## Hardness
 
-The hardness was proven in Theorem 1 by Tessaro, and Zhu {% cite C:ZhuTes25 %} and reduced from the hardness of [MSIS](/lwe/#module-sis) and [MLWE](/lwe/#module-lwe) for a judicious choice of parameters. Due to the definition, the hardness is only proven for secrets sampled from discrete Gaussian distributions.
+The hardness was proven in Theorem 1 by Tessaro, and Zhu {% cite C:ZhuTes25 %} and reduced from the hardness of [MSIS](/sis/#module-sis) and [MLWE](/lwe/#module-lwe) for a judicious choice of parameters. Due to the definition, the hardness is only proven for secrets sampled from discrete Gaussian distributions.
 
 ## Constructions built from Algebraic One-More-ISIS {#constructions}
 

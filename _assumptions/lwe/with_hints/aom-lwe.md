@@ -53,7 +53,7 @@ The definition is the same as the previous definition except that the $$\vec{s}_
 
 In order to gain confidence in the assumption, the hardness of selective AOM-Uniform was proven by Espitau, Katsumata, and Takemure {% cite JC:EspKatTak25 %}. Despite the hardness is only proven for secrets and errors following discrete Gaussians, Espitau, Katsumata, and Takemure {% cite JC:EspKatTak25 %} reduced AOM-Uniform MLWE to AOM-MLW in both adaptive and selective versions.
 
-The hardness of the adaptive version was later reduced to the dual AOM-MISIS problem in Lemma 7 by Tessaro, and Zhu {% cite C:ZhuTes25 %} improving previously conjectured parameters which is reduced to both [MSIS](/lwe/#module-sis) and [MLWE](/lwe/#module-lwe). This proof, in the adaptive setting, strengthens the use of the assumption in direct application cases.
+The hardness of the adaptive version was later reduced to the dual AOM-MISIS problem in Lemma 7 by Tessaro, and Zhu {% cite C:ZhuTes25 %} improving previously conjectured parameters which is reduced to both [MSIS](/sis/#module-sis) and [MLWE](/lwe/#module-lwe). This proof, in the adaptive setting, strengthens the use of the assumption in direct application cases.
 
 
 
