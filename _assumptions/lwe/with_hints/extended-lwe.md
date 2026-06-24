@@ -38,12 +38,12 @@ The Multi-Hint Extended-LWE assumption is introduced in {% cite C:AgrLibSte16 %}
 
 Due to the varying definitions of Extended LWE, we group the results by definition.
 
-- $$\chi' = \set{0}$$: Lemma 4.7 and 4.8 of {% cite STOC:BLPRS13 %} provide reductions from a [First-is-errorless variant of LWE](/TODO/) to Extended LWE. First-is-errorless LWE is previously shown as at least as hard as LWE in Lemma 4.3.
+- $$\chi' = \set{0}$$: Lemma 4.7 and 4.8 of {% cite STOC:BLPRS13 %} provide reductions from a [First-is-errorless variant of LWE](/first-are-errorless-lwe/) to Extended LWE. First-is-errorless LWE is previously shown as at least as hard as LWE in Lemma 4.3.
 - $$k=1$$, $$\chi' = D_{\ZZ,s'}$$ and $$\adv_0 = \tau$$: Section 3 of {% cite PKC:AlpPei12 %} provides a brief description of an efficient attack on Extended LWE if too many-hints are given out and $$\tau$$ is Subgaussian. Further, they provide a reduction from LWE to Extended LWE in Theorem 3.1.
 - $$k=1$$, $$\chi = D_{\ZZ,s}$$ and $$\chi' = D_{\ZZ, s'}$$: In Section 6.2.4 of {% cite C:ONePeiWat11 %}, the authors hint at a straightforward reduction from LWE to Extended LWE.
 - Lyubashevsky, Nguyen and Seiler's module-definition {% cite PKC:LyuNguSei21 %} includes additional scalars and they give a reduction from non-algebraic LWE to non-algebraic Extended LWE in Appendix D.
-- Extended Module-LWE with $$\adv_0 = \tau$$ and $$\chi' = \set{0}$$: The authors of {% cite CTRSA:BJRW21 %} utilises [First-t-are-errorless variant of LWE](/TODO/) as an intermediate step in the reduction from M-LWE to Extended LWE, which itself is an intermediate result to reduce to [Binary-Secret Module-LWE](/TODO/).
-- Extended Multi-Hint Module-LWE with $$k=1$$, $$\chi = D_{\ZZ,s}$$ and it only hands out the trace of each hint: Lemma 3.8 of {% cite EPRINT:AlpApo16 %} formalises a reduction from M-LWE to Extended M-LWE, which also uses the [First-t-are-errorless LWE](/TODO/) as an intermediate step and yields an intermediate step in a reduction from M-LWE to [M-LWR](/lwr/) itself.
+- Extended Module-LWE with $$\adv_0 = \tau$$ and $$\chi' = \set{0}$$: The authors of {% cite CTRSA:BJRW21 %} utilises [First-are-errorless variant of LWE](/first-are-errorless-lwe/) as an intermediate step in the reduction from M-LWE to Extended LWE, which itself is an intermediate result to reduce to [Binary-Secret Module-LWE](/TODO/).
+- Extended Multi-Hint Module-LWE with $$k=1$$, $$\chi = D_{\ZZ,s}$$ and it only hands out the trace of each hint: Lemma 3.8 of {% cite EPRINT:AlpApo16 %} formalises a reduction from M-LWE to Extended M-LWE, which also uses the [First-are-errorless LWE](/first-are-errorless-lwe/) as an intermediate step and yields an intermediate step in a reduction from M-LWE to [M-LWR](/lwr/) itself.
 
 ## Constructions built from Extended LWE {#constructions}
 

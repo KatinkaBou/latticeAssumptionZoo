@@ -34,7 +34,7 @@ $$ \left( \mat{A}, \set{\vec{c}_{i,j_i}^T, \vec{r}_{i,j_i}}_{i \in [k], j_1,\dot
 Agrawal, Rossi, Yadav, and Yamada {% cite C:ARYY23 %} propose this generalised and stronger (some may say extended) version of Tensor LWE to provide a construction of constant-input attribute-based encryption. The reductions given for Tensor LWE have not been generalised to Strong Tensor LWE. Thus, the only known reductions exist for the special case $$k=1$$, where Strong Tensor LWE is equivalent to Tensor LWE.
 
 ### Circular Tensor LWE {#circular-tensor-lwe}
-In Section 4.2 of {% cite C:AgrKumYam24 %}, Agrawal, Kumari, and Yamada introduce a circular version of Tensor LWE to provide an attribute-based encryption scheme for Turing machines. As the name suggests, this assumption combines the ideas of [Circular LWE](/TODO/) and Tensor LWE.
+In Section 4.2 of {% cite C:AgrKumYam24 %}, Agrawal, Kumari, and Yamada introduce a circular version of Tensor LWE to provide an attribute-based encryption scheme for Turing machines. As the name suggests, this assumption combines the ideas of [Circular LWE](/circular-lwe/) and Tensor LWE.
 
 ## Hardness
 
