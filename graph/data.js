@@ -172,6 +172,8 @@ assumptionFamily('Decomposed-SIS', ['Decomposed-SIS', 'Extended-Decomposed-SIS']
 
 assumption('Evasive-SIS', 'Evasive SIS', 2022, ['Sign'], '/evasive-sis/', 'SIS');
 
+assumption('PV-SIS', 'Partial Vandermonde SIS - closely related to Partial Fourier Recovery Problem', 2014, ['Sign', 'EffEnhSign'], '/pv-sis/', 'SIS');
+
 
 // LWE-based assumptions - family, i.e. last parameter is always 'LWE'
 assumption('LWE', 'Learning with Errors', 2005, ['PKE', 'FuncEnc', 'COED'], '/lwe/', 'LWE');
@@ -236,6 +238,10 @@ assumption('SSP-RLWE', 'Specialised Secret-Power Ring-LWE', 2025, ['PrivEnhEnc']
 assumption('SCSP-RLWE', 'Specialised Circular Secret-Power Ring-LWE', 2025, ['PrivEnhEnc'], '/sp-rlwe/#scsp-rlwe', 'LWE', true);
 assumption('P-RLWE', 'Power Ring-LWE', 2024, ['PrivEnhEnc'], '/p-rlwe/', 'LWE');
 assumptionFamily('Power-LWE', ['SP-RLWE', 'wSP-RLWE', 'SSP-RLWE', 'SCSP-RLWE', 'P-RLWE']);
+
+assumption('PV-LWE', 'Partial Vandermonde LWE - closely related to Partial Fourier Recovery Problem', 2022, ['Sign', 'EffEnhSign', 'PKE'], '/pv-lwe/', 'LWE');
+assumptionFamily('Partial Vandermonde', ['PV-SIS', 'PV-LWE']);
+
 
 // Standalone assumptions - family, i.e. last parameter is always 'Standalone'
 assumption('NTRU', 'Number Theorists \'R\' Us or Number Theory Research Unit', 1996, ['Sign', 'PKE', 'COED'], '/ntru/', 'Standalone');
