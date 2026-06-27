@@ -194,6 +194,8 @@ assumption('Continuous-LWE', 'Continuous LWE', 2021, ['PKE'], '/continuous-lwe/'
 assumption('Hom-Continuous-LWE', 'Homogeneous Continuous LWE', 2021, ['PKE'], '/continuous-lwe/#hclwe', 'LWE', true);
 assumptionFamily('Continuous-LWE', ['Continuous-LWE', 'Hom-Continuous-LWE']);
 
+assumption('Variety-LWE', 'Variety LWE', 2025, ['COED'], '/variety-lwe/', 'LWE');
+
 assumption('k-LWE', 'k-LWE', 2014, ['PKE'], '/klwe/', 'LWE');
 
 assumption('Asymmetric-LWE', 'Asymmetric LWE', 2020, ['Sign', 'PKE'], '/asymmetric-lwe/', 'LWE');

@@ -2,6 +2,7 @@
 title: "Continuous LWE"
 seo_title: "Continuous LWE"
 family: "LWE"
+subfamily: "LWE over Exotic Domains"
 graph_id: "Continuous-LWE"
 assumption_status: "implied"
 
