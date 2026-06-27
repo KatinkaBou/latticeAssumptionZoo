@@ -250,6 +250,8 @@ assumption('PV-LWE', 'Partial Vandermonde LWE - closely related to Partial Fouri
 assumption('PNTT-PLWE', 'Partial-NTT Polynomial-LWE', 2022, ['Sign', 'EffEnhSign', 'PKE'], '/pv-lwe/#pntt-plwe', 'LWE', true);
 assumption('Hybrid-PV-P', 'Hybrid between Partial Vandermonde LWE and Polynomial-LWE', 2022, ['Sign', 'EffEnhSign', 'PKE'], '/pv-lwe/#hybrid-pv-p', 'LWE', true);
 
+assumption('Equivocal-LWE', 'Equivocal LWE', 2025, ['PrivEnhEnc', 'FuncEnc'], '/equivocal-lwe/', 'LWE');
+
 
 // Standalone assumptions - family, i.e. last parameter is always 'Standalone'
 assumption('NTRU', 'Number Theorists \'R\' Us or Number Theory Research Unit', 1996, ['Sign', 'PKE', 'COED'], '/ntru/', 'Standalone');
