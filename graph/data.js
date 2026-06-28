@@ -233,6 +233,7 @@ assumption('Sparse-Matrix-LWE', 'Sparse Matrix LWE', 2024, ['COED'], '/sparse-ma
 assumption('Hollow-LWE', 'Hollow LWE', 2025, ['PKE'], '/hollow-lwe/', 'LWE');
 
 assumption('Circular-LWE', 'Circular (Small-Secret) LWE', 2023, ['FuncEnc'], '/circular-lwe/', 'LWE');
+assumption('CRO', 'Circular LWE with Random Openings', 2025, ['FuncEnc', 'PrivEnhEnc'], '/circular-lwe/#cro', 'LWE', true);
 
 assumption('LWE-OD', 'Learning with Errors with Output Dependencies', 2026, ['PKE'], '/lwe-od/', 'LWE'); // list of constructions is empty unless one counts constructions from LWE and LWR
 
@@ -355,6 +356,7 @@ reducesTo('SIS', 'SAOM-UMLWE', 625);
 reducesTo('LWE', 'SAOM-UMLWE', 625);
 
 reducesTo('Circular-LWE', 'LWE', 400);
+reducesTo('CRO', 'Circular-LWE');
 
 reducesTo('SP-RLWE', 'wSP-RLWE');
 

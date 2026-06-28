@@ -25,6 +25,13 @@ $$ \set{ 1^\lambda, \begin{bmatrix} \mat{A} \\ \delta^T \end{bmatrix}, \Delta, \
 
 The second and third elements contain the circular terms.
 
+## Variants
+
+### CRO$$_{n,m,m',q,s,s'}$$ {#cro}
+_CRO is a strictly stronger assumption than Circular LWE as it additionally links GSW {% cite C:GenSahWat13 %} public keys and ciphertexts via random openings (without leakage on the error term)._
+
+In 2025, Hsieh, Jain, and Lin {% cite C:HsiJaiLin25 %} extended the Circular LWE assumption via Random Openings (Circular LWE with Random Openings, CRO). They state that the hardness of CRO implies the hardness of Circular LWE and provide cryptanalysis of CRO in Section 2 of their paper.
+
 ## Hardness
 
 In Lemma 3 of {% cite FOCS:HsiLinLuo23 %}, they state several (trivial) reductions between Circular LWE, [small-secret LWE](/lwe/#small-secret-lwe), and [LWE](/lwe/). However, these reductions only provide uppper bounds on the hardness of Circular LWE.
@@ -34,6 +41,7 @@ In Lemma 3 of {% cite FOCS:HsiLinLuo23 %}, they state several (trivial) reductio
 To avoid confusion, we only list constructions built from the formalised Circular LWE assumption.
 - Attribute-Based Encryption for Circuits of Unbounded Depth {% cite FOCS:HsiLinLuo23 %}
 - Attribute-Based Encryption for Turing Machines {% cite C:AgrKumYam24 %}
+- Indistinguishable Obfuscation {% cite C:HsiJaiLin25 %}
 
 ## Related Assumptions
 
