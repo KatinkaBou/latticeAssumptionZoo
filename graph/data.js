@@ -192,6 +192,9 @@ assumption('Augmented-LWE', 'Augmented LWE', 2015, ['PKE', 'EffEnhEnc'], '/augme
 
 assumption('Binary-Secret-LWE', 'Binary-Secret LWE', 2018, ['PKE'], '/binary-secret-lwe/', 'LWE');
 
+assumption('Known-Norm-LWE', 'Known-Norm LWE', 2024, ['PKE', 'ThresholdEnc'], '/known-norm-lwe/', 'LWE');
+assumption('Known-Covariance-RLWE', 'Known-Covariance Ring-LWE', 2024, ['PKE', 'ThresholdEnc'], '/known-norm-lwe/#known-covariance-rlwe', 'LWE', true);
+
 assumption('Continuous-LWE', 'Continuous LWE', 2021, ['PKE'], '/continuous-lwe/', 'LWE');
 assumption('Hom-Continuous-LWE', 'Homogeneous Continuous LWE', 2021, ['PKE'], '/continuous-lwe/#hclwe', 'LWE', true);
 assumptionFamily('Continuous-LWE', ['Continuous-LWE', 'Hom-Continuous-LWE']);
@@ -326,6 +329,9 @@ reducesTo('LWE', 'Augmented-LWE', 175);
 
 reducesTo('LWE', 'Binary-Secret-LWE', 175);
 
+reducesTo('LWE', 'Known-Norm-LWE', 200);
+reducesTo('LWE', 'Known-Covariance-RLWE', 250);
+
 reducesTo('Binary-Secret-LWE', 'Continuous-LWE', 200);
 reducesTo('Binary-Secret-LWE', 'Hom-Continuous-LWE', 225);
 
@@ -425,6 +431,8 @@ generalisedBy('BASIS', 'h-BASIS', 250);
 generalisedBy('Binary-Matrix-LWE', 'Non-Uniform-LWE');
 generalisedBy('LWE-with-low-norm', 'Non-Uniform-LWE');
 generalisedBy('Subspace-LWE', 'Non-Uniform-LWE');
+
+generalisedBy('Known-Norm-LWE', 'Known-Covariance-RLWE');
 
 generalisedBy('Hint-LWE', 'Leaky-LWE');
 

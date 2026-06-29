@@ -2,7 +2,7 @@
 title: "$$k$$-LWE"
 seo_title: "k-LWE"
 family: "LWE"
-subfamily: "LWE with Hints"
+subfamily: "LWE with Leakage"
 graph_id: "k-LWE"
 assumption_status: "implied"
 

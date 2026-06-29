@@ -2,7 +2,7 @@
 title: "Algebraic One-More-MLWE (AOM-MLWE)"
 seo_title: "Algebraic One-More-MLWE"
 family: "LWE"
-subfamily: "LWE with Hints"
+subfamily: "LWE with Leakage"
 graph_id: "AOM-MLWE"
 assumption_status: "implied"
 

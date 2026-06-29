@@ -2,7 +2,7 @@
 title: "Leaky LWE"
 seo_title: "Leaky LWE"
 family: "LWE"
-subfamily: "LWE with Hints"
+subfamily: "LWE with Leakage"
 graph_id: "Leaky-LWE"
 assumption_status: "implied"
 
