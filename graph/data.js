@@ -175,6 +175,8 @@ assumption('Evasive-SIS', 'Evasive SIS', 2022, ['Sign'], '/evasive-sis/', 'SIS')
 assumption('PV-SIS', 'Partial Vandermonde SIS - closely related to Partial Fourier Recovery Problem', 2014, ['Sign', 'EffEnhSign'], '/pv-sis/', 'SIS');
 assumption('PNTT-PSIS', 'Partial-NTT Polynomial-SIS', 2022, ['Sign', 'EffEnhSign'], '/pv-sis/#pntt-psis', 'SIS', true);
 
+assumption('ISSIS', 'Inhomogeneous Short and Sparse Integer Solution', 2025, ['Commitment'], '/issis/', 'SIS');
+
 
 // LWE-based assumptions - family, i.e. last parameter is always 'LWE'
 assumption('LWE', 'Learning with Errors', 2005, ['PKE', 'FuncEnc', 'COED'], '/lwe/', 'LWE');
@@ -200,6 +202,9 @@ assumption('Reused-A-LWE', 'Reused-A LWE', 2024, ['PKE', 'ThresholdEnc'], '/reus
 assumption('Yet-Another-LWE', 'Yet-Another LWE', 2024, ['ThresholdEnc', 'COED'], '/yet-another-lwe/', 'LWE');
 assumption('Yet-Another^2-LWE', 'Yet-Another^2 LWE', 2024, ['ThresholdEnc', 'COED'], '/yet-another-lwe/#yet-another2-lwe', 'LWE', true);
 assumptionFamily('Yet-Another-LWE', ['Yet-Another-LWE', 'Yet-Another^2-LWE']);
+
+assumption('LW2E', 'Learning with Two Errors', 2025, ['PKE'], '/lw2e/', 'LWE');
+assumption('LWSSE', 'Learning with Short and Sparse Errors', 2025, ['PKE'], '/lwsse/', 'LWE');
 
 assumption('FMS-LWE', 'Fixed-Matrix Shifted LWE', 2024, ['PKE', 'ThresholdEnc'], '/fms-lwe/', 'LWE');
 
@@ -324,6 +329,9 @@ reducesTo('Decomposed-SIS', 'Extended-Decomposed-SIS', 300);
 reducesTo('PV-SIS', 'PNTT-PSIS');
 reducesTo('PNTT-PSIS', 'PNTT-PLWE');
 
+reducesTo('ISSIS', 'LWSSE');
+reducesTo('LWSSE', 'ISSIS');
+
 // LWE
 reducesTo('LWE', 'SIS', 1000);
 reducesTo('ssLWE', 'LWE');
@@ -347,6 +355,11 @@ reducesTo('LWE', 'Reused-A-LWE', 300);
 reducesTo('Known-Norm-LWE', 'Yet-Another-LWE');
 reducesTo('Reused-A-LWE', 'Yet-Another-LWE');
 
+reducesTo('LPN', 'LW2E', 400);
+reducesTo('LWE', 'LW2E', 300);
+reducesTo('LWSSE', 'LPN', 300);
+reducesTo('LWSSE', 'LWE', 400);
+
 reducesTo('LWE', 'FMS-LWE', 225);
 
 reducesTo('Binary-Secret-LWE', 'Continuous-LWE', 200);
@@ -367,11 +380,11 @@ reducesTo('FAE-LWE', 'Extended-LWE');
 reducesTo('LWE', 'Extended-LWE', 200);
 reducesTo('LWE', 'MH-Ext-LWE', 200);
 
-reducesTo('LWE', 'elLWE');
-reducesTo('LWE', 'Hint-LWE');
+reducesTo('LWE', 'elLWE', 200);
+reducesTo('LWE', 'Hint-LWE', 200);
 reducesTo('Hint-LWE', 'Coset-Hint-LWE');
 
-reducesTo('LWE','Leaky-LWE');
+reducesTo('LWE','Leaky-LWE', 250);
 
 reducesTo('LWE', '{0,1}-CRT-LWE', 225);
 
@@ -459,6 +472,7 @@ generalisedBy('Known-Norm-LWE', 'Known-Covariance-RLWE');
 generalisedBy('Reused-A-LWE', 'Hint-LWE', 175);
 
 generalisedBy('Hint-LWE', 'Leaky-LWE');
+generalisedBy('elLWE', 'Leaky-LWE');
 
 generalisedBy('Tensor-LWE', 'Strong-Tensor-LWE');
 
