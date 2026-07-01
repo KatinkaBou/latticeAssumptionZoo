@@ -1,5 +1,5 @@
 main:
-- title: Visualisations
+- title: Home
   url: /
   children:
     - title: "Graph"

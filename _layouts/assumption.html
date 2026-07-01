@@ -71,9 +71,34 @@ classes: wide
     opacity: 1;
     visibility: visible;
   }
+
+  /* Sticky Side Tab */
+  .sticky-side-tab {
+    position: fixed;
+    right: 0;
+    bottom: 0%;
+    transform: translateY(-50%);
+    background-color: #6f777d;
+    color: #fff !important;
+    padding: 10px 5px;
+    border-radius: 4px 0 0 4px;
+    font-size: 0.8em;
+    text-decoration: none !important;
+    z-index: 9999;
+    writing-mode: vertical-rl;
+    text-align: center;
+    box-shadow: -2px 0 2px rgba(0,0,0,0.15);
+    transition: background-color 0.2s ease, padding-right 0.2s ease;
+  }
+  .sticky-side-tab:hover {
+    background-color: #3d4144;
+    padding-right: 10px;
+  }
 </style>
 
 <div id="main" role="main">
+
+  <a href="/common-notation/" class="sticky-side-tab">Common Notation</a>
 
   {% include sidebar-with-toc.html %}
 
