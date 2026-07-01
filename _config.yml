@@ -7,6 +7,7 @@ description: "Lattice Assumption Zoo | Cryptographic Assumptions based on Lattic
 url: "https://latticeassumptionzoo.org"
 baseurl: ""
 search: true
+search_full_content: true
 
 theme: "minimal-mistakes-jekyll"
 minimal_mistakes_skin: "dirt"
