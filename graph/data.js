@@ -132,6 +132,12 @@ assumption('t-M-ISIS', 't-Module ISIS', 2024, ['Sign'], '/t-misis/', 'SIS');
 assumption('t-M-SPISIS', 't-Module Second Preimage ISIS', 2024, ['Sign'], '/t-misis/#t-m-spisis', 'SIS', true);
 assumptionFamily('t-M-ISIS', ['t-M-ISIS', 't-M-SPISIS']);
 
+assumption('vSIS', 'Vanishing SIS', 2023, ['ZK', 'Sign', 'COAD'], '/vsis/', 'SIS');
+assumption('Hint-vSIS', 'Hinted vSIS', 2025, ['Sign'], '/vsis/#hint-vsis', 'SIS', true);
+assumption('s-Hint-vSIS', 'Strong Hinted vSIS', 2025, ['Sign'], '/vsis/#s-hint-vsis', 'SIS', true);
+assumption('s-$Hint-vSIS', 'Strong Random Hinted vSIS', 2025, ['Sign'], '/vsis/#s-random-hint-vsis', 'SIS', true);
+assumptionFamily('vSIS', ['vSIS', 'Hint-vSIS', 's-Hint-vSIS', 's-$Hint-vSIS']);
+
 assumption('k-SIS', 'k-SIS', 2011, ['Sign', 'TresholdSign', 'COAD'], '/ksis/', 'SIS');
 assumption('k-M-ISIS', 'k-M-ISIS', 2022, ['Commitment'], '/kmisis/', 'SIS');
 assumption('Twin-k-M-ISIS', 'Twin k-M-ISIS', 2023, ['Commitment'], '/twin-kmisis/', 'SIS');
@@ -320,6 +326,8 @@ reducesTo('k-M-ISIS', 'Twin-k-M-ISIS');
 
 reducesTo('OM-ISIS', 'H-ISIS', 200);
 
+reducesTo('s-Hint-vSIS', 's-$Hint-vSIS');
+
 reducesTo('ISISf', 'GenISISf');
 reducesTo('ISISf', 'IntISISf');
 reducesTo('GenISISf', 'IntGenISISf');
@@ -443,6 +451,9 @@ partiallyReducesTo('SIS', 'ISISf', 'f = RO', 300);
 partiallyReducesTo('SIS', 'BASIS', 'SIS reduces to BASIS_rand and M-SIS to PRISIS for l=2', 250);
 partiallyReducesTo('SIS', 'BASIS_power', 'M-SIS reduces to PRISIS for l=2', 300);
 partiallyReducesTo('SIS', 'h-PRISIS', 'M-SIS reduces to h-PRISIS for l=2', 300);
+partiallyReducesTo('vSIS', 'Hint-vSIS', 'Assuming Evasive SIS', 300);
+partiallyReducesTo('GenISISf', 's-$Hint-vSIS', 'Certain instantiations only', 300);
+
 
 partiallyReducesTo('Evasive-LWE', 'Evasive-SIS', 'Public-coin Evasive LWE (quantumly) heuristically reduces to Evasive SIS', 300); // to come
 
@@ -470,6 +481,9 @@ generalisedBy('BASIS_struct', 'BASIS');
 generalisedBy('BASIS_power', 'BASIS');
 generalisedBy('h-PRISIS', 'h-BASIS');
 generalisedBy('BASIS', 'h-BASIS', 250);
+
+generalisedBy('SIS', 'vSIS');
+generalisedBy('Hint-vSIS', 's-Hint-vSIS');
 
 // LWE
 generalisedBy('Order-LWE', 'Generalised-LWE');
